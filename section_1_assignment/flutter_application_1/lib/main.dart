@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text(" hey  dice")),
+        appBar: AppBar(title: Text(" hey dice")),
         body: Center(
           child: Column(
             children: [
