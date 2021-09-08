@@ -1,11 +1,33 @@
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
-  final titleController = TextEditingController();
-  final amountController = TextEditingController();
+class NewTransaction extends StatefulWidget {
   final Function addNewTransaction;
-
   NewTransaction({@required this.addNewTransaction});
+
+  @override
+  _NewTransactionState createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
+  final titleController = TextEditingController();
+
+  final amountController = TextEditingController();
+
+  void submitData() {
+    final enteredTitle = titleController.text;
+    final enteredAmount = double.parse(amountController.text);
+    if (enteredAmount <= 0 || enteredAmount > 9999) {
+      amountController.text = " Enter between 0 and 10000 !";
+      return;
+    }
+    if (enteredTitle.isEmpty || amountController.text.isEmpty) {
+      return;
+    }
+    widget.addNewTransaction(enteredTitle, enteredAmount);
+    Navigator.of(context).pop(); // to close an pop-of screen
+    titleController.text = "";
+    amountController.text = "";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +42,7 @@ class NewTransaction extends StatelessWidget {
               autocorrect: true,
               autofillHints: ["omar"],
               autofocus: false,
+              onSubmitted: (_) => submitData(),
               enableSuggestions: true,
               decoration: InputDecoration(
                 labelText: "Title",
@@ -29,8 +52,10 @@ class NewTransaction extends StatelessWidget {
             ),
             TextField(
               autocorrect: true,
-              autofocus: true,
+              autofocus: false,
               enableSuggestions: true,
+              keyboardType: TextInputType.number,
+              onSubmitted: (_) => submitData(),
               decoration: InputDecoration(
                 labelText: "Amount",
                 filled: true,
@@ -46,10 +71,7 @@ class NewTransaction extends StatelessWidget {
                 ),
               ),
               textColor: Colors.blue[800],
-              onPressed: () {
-                addNewTransaction(
-                    titleController.text, double.parse(amountController.text));
-              },
+              onPressed: submitData,
             ),
           ],
         ),

@@ -8,7 +8,7 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 370,
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         itemBuilder: (ctx, index) {
@@ -22,14 +22,16 @@ class TransactionList extends StatelessWidget {
                     horizontal: 20,
                   ),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.green[900], width: 2),
+                    border: Border.all(
+                        color: Theme.of(context).primaryColor, width: 2),
                   ),
                   child: Text(
-                    "\$" + _userTransactionList[index].amount.toString(),
+                    "\$" +
+                        _userTransactionList[index].amount.toStringAsFixed(2),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.green[900],
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ),
@@ -40,10 +42,7 @@ class TransactionList extends StatelessWidget {
                     Text(
                       _userTransactionList[index].title,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                     Text(
                       DateFormat.yMMMd()
