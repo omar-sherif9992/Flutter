@@ -121,6 +121,7 @@ class _NewTransactionState extends State<NewTransaction> {
                           ),
                           onPressed: _submitData,
                         )
+                      // ignore: deprecated_member_use
                       : FlatButton(
                           textColor: Theme.of(context).primaryColor,
                           child: Text(" Choose a Date"),

@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Text(
                     "Show Chart",
-                    style: Theme.of(context).textTheme.title,
+                    style: Theme.of(context).textTheme.headline6,
                   ),
                   Switch.adaptive(
                     // ios look by using adaptive
