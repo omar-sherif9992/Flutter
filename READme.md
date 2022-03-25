@@ -2,7 +2,7 @@
 
 
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I am Omar Sherif Ali </h1>
-<h3 align="center">Computer Science and Engineering @GUC | FullStack Web & API & Mobile application Developer </h3>
+<h3 align="center">Computer Science & Engineering @GUC | FullStack Web & API & Mobile application Developer </h3>
 
 <br>
 
