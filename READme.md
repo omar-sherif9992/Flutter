@@ -12,7 +12,7 @@
 
 
 <div align="center">
-    <img src="./cart-svgrepo-com.svg" alt="Logo" width="80" height="80">
+    <img src="./woolly-online-money-transfer-1.png" alt="Logo" width="120" height="120">
 
 
   <h3 align="center">myPocket</h3>
