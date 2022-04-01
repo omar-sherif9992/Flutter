@@ -30,6 +30,10 @@
 ## 💡 Description
 The objective of this project is developing a Mobile application that can help you track your Expenses through the week.
 
+<div align="center">
+<img src="./58288896-28de-4982-8eb4-5677ce89a4be.jpg" alt="Logo" height="300px">
+</div>
+
 
 ## 💻️ Languages & Concepts Used
 
